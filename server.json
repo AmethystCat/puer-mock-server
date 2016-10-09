@@ -1,0 +1,134 @@
+{
+    "info": {
+        "summary": "Homer Live",
+        "description": "API for Homer Live App"
+    },
+
+    "api": {
+        "GET /demo": {
+            "response": {
+                "code": 0,
+                "mail": "@email",
+                "avatar": "@image(200x100)",
+                "date": "@now"
+            }
+        },
+        "GET /worker/tasks": {
+            "response": {
+                "code": 0,
+                "tasks": [
+                    {
+                        "id": 1,
+                        "name": "张三",
+                        "mobile": "13800138000",
+                        "idcard_no": "510822199002132234",
+                        "address": "成都市东门大桥时代1号",
+                        "lock_color": "红古铜",
+                        "remark": "测试备注"
+                    },
+                    {
+                        "id": 1,
+                        "name": "赵铁柱",
+                        "mobile": "138001382220",
+                        "idcard_no": "510822199002132234",
+                        "address": "东门大桥时代9号",
+                        "lock_color": "太空灰",
+                        "remark": "测试备注2112312312"
+                    },
+                    {
+                        "id": 1,
+                        "name": "lida",
+                        "mobile": "134001382220",
+                        "idcard_no": "510822199002132234",
+                        "address": "中和时代9号",
+                        "lock_color": "香槟金",
+                        "remark": "测试备注2112312312"
+                    },
+                    {
+                        "id": 1,
+                        "name": "lida",
+                        "mobile": "134001382220",
+                        "idcard_no": "510822199002132234",
+                        "address": "中和时代9号",
+                        "lock_color": "香槟金",
+                        "remark": "测试备注2112312312"
+                    },
+                    {
+                        "id": 1,
+                        "name": "lida",
+                        "mobile": "134001382220",
+                        "idcard_no": "510822199002132234",
+                        "address": "中和时代9号",
+                        "lock_color": "香槟金",
+                        "remark": "测试备注2112312312"
+                    }
+                ],
+                "total": 1
+            }
+        },
+        "POST /worker/tasks/install": {
+            "response": {
+                "code": 0,
+                "message": "安装成功"
+            }
+        },
+        "GET /worker/logout": {
+            "response": {
+                "code": 0,
+                "message": "退出成功"
+            }
+        },
+        "POST /worker/login": {
+            "response": {
+                "code": 0,
+                "message": "登录成功"
+            }
+        },
+        "POST /worker/profile/password" : {
+            "response": {
+                "code": 0,
+                "message": "修改成功"
+            }
+        },
+        "GET /admin/workers" : {
+            "response": {
+                "code": 0,
+                "workers": [
+                    {
+                        "id": "1",
+                        "mobile": "13800138000",
+                        "name": "张三"
+                    },
+                    {
+                        "id": "1",
+                        "mobile": "13800138001",
+                        "name": "李四"
+                    },
+                    {
+                        "id": "22222",
+                        "mobile": "13800138001",
+                        "name": "张全蛋"
+                    },
+                    {
+                        "id": "1",
+                        "mobile": "13800138001",
+                        "name": "赵铁柱"
+                    }
+                ],
+                "total": 2
+            }
+        },
+        "POST /admin/workers" : {
+            "response": {
+                "code": 0,
+                "message": "添加成功"
+            }
+        },
+        "POST /admin/market/lock-free-trials/1/assign": {
+            "response": {
+                "code": 0,
+                "message": "分配成功"
+            }
+        }
+    }
+}

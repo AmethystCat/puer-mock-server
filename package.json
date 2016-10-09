@@ -1,0 +1,23 @@
+{
+  "name": "homer-mock-server",
+  "version": "1.0.0",
+  "description": "Mock Server",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "puer -a index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puer-mock": "^1.1.1"
+  },
+  "keywords": [
+    "node",
+    "mock-server",
+    "javascript"
+  ]
+}
