@@ -13,121 +13,202 @@
                 "date": "@now"
             }
         },
-        "GET /worker/tasks": {
-            "response": {
-                "code": 0,
-                "tasks": [
-                    {
-                        "id": 1,
-                        "name": "张三",
-                        "mobile": "13800138000",
-                        "idcard_no": "510822199002132234",
-                        "address": "成都市东门大桥时代1号",
-                        "lock_color": "红古铜",
-                        "remark": "测试备注"
-                    },
-                    {
-                        "id": 1,
-                        "name": "赵铁柱",
-                        "mobile": "138001382220",
-                        "idcard_no": "510822199002132234",
-                        "address": "东门大桥时代9号",
-                        "lock_color": "太空灰",
-                        "remark": "测试备注2112312312"
-                    },
-                    {
-                        "id": 1,
-                        "name": "lida",
-                        "mobile": "134001382220",
-                        "idcard_no": "510822199002132234",
-                        "address": "中和时代9号",
-                        "lock_color": "香槟金",
-                        "remark": "测试备注2112312312"
-                    },
-                    {
-                        "id": 1,
-                        "name": "lida",
-                        "mobile": "134001382220",
-                        "idcard_no": "510822199002132234",
-                        "address": "中和时代9号",
-                        "lock_color": "香槟金",
-                        "remark": "测试备注2112312312"
-                    },
-                    {
-                        "id": 1,
-                        "name": "lida",
-                        "mobile": "134001382220",
-                        "idcard_no": "510822199002132234",
-                        "address": "中和时代9号",
-                        "lock_color": "香槟金",
-                        "remark": "测试备注2112312312"
-                    }
-                ],
-                "total": 1
-            }
-        },
-        "POST /worker/tasks/install": {
-            "response": {
-                "code": 0,
-                "message": "安装成功"
-            }
-        },
-        "GET /worker/logout": {
-            "response": {
-                "code": 0,
-                "message": "退出成功"
-            }
-        },
-        "POST /worker/login": {
+        "POST /api/seller/login": {
             "response": {
                 "code": 0,
                 "message": "登录成功"
             }
         },
-        "POST /worker/profile/password" : {
+        "POST /api/seller/register": {
             "response": {
                 "code": 0,
-                "message": "修改成功"
+                "user": {
+                    "id": "c65af44e-02cf-4bb9-86d0-01e6aa6df25a",
+                    "name": "王铁柱",
+                    "mobile": "13800138000",
+                    "seller_type": 1
+                },
+                "message": "注册成功"
             }
         },
-        "GET /admin/workers" : {
+        "GET /api/seller/sales" : {
             "response": {
                 "code": 0,
-                "workers": [
+                "total": 2,
+                "total_page": 1,
+                "purchasers": [
                     {
-                        "id": "1",
                         "mobile": "13800138000",
-                        "name": "张三"
+                        "created_at": "2016-08-01"
                     },
                     {
-                        "id": "1",
                         "mobile": "13800138001",
-                        "name": "李四"
-                    },
-                    {
-                        "id": "22222",
-                        "mobile": "13800138001",
-                        "name": "张全蛋"
-                    },
-                    {
-                        "id": "1",
-                        "mobile": "13800138001",
-                        "name": "赵铁柱"
+                        "created_at": "2016-08-02"
                     }
                 ],
-                "total": 2
+                "message": "成功"
             }
         },
-        "POST /admin/workers" : {
+        "GET /api/seller/promotion-code" : {
             "response": {
                 "code": 0,
-                "message": "添加成功"
+                "promotion_code": "HQ001234"
             }
         },
-        "POST /admin/market/lock-free-trials/1/assign": {
+        "GET /api/seller/logout": {
+            "response": {
+                "code": 0,
+                "message": "退出成功"
+            }
+        },
+        "POST /api/seller/password/verify-sms": {
+            "response": {
+                "code": 0,
+                "message": "验证码已发送成功"
+            }
+        },
+        "POST /api/seller/register-code": {
+            "response": {
+                "code": 0,
+                "message": "验证码已发送成功"
+            }
+        },
+        "POST /api/seller/register/crowd-sourcing": {
             "response": {
                 "code": 0,
                 "message": "分配成功"
+            }
+        },
+        "GET /api/seller/list": {
+            "response": {
+                "code": 0,
+                "users": [
+                    {
+                        "mobile": 13211112222,
+                        "name": "张三qweqw"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "李四"
+                    },
+                    {
+                        "mobile": 18534212222,
+                        "name": "王五"
+                    },
+                    {
+                        "mobile": 13834212222,
+                        "name": "林纳斯"
+                    },
+                    {
+                        "mobile": 15534212222,
+                        "name": "gaga"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "lily"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "asdkf"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "aaaa"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "bbbb"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "cccc"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "dddd"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "eeee"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "ffff"
+                    },
+                    {
+                        "mobile": 13534212222,
+                        "name": "lily"
+                    }
+                ],
+                "message": "成功"
+            }
+        },
+        "GET /api/seller/invitee": {
+            "response": {
+                "code":0,
+                "total":3,
+                "total_page":2,
+                "invitee":[
+                    {
+                        "invitee_mobile":"13800138001",
+                        "invited_at":"2016-10-15 20:23:40"
+                    },
+                    {
+                        "invitee_mobile":"13800138002",
+                        "invited_at":"2016-10-15 20:23:40"
+                    }
+                ]
+            }
+        },
+        "GET /api/seller/orders": {
+            "response": {
+                "code":0,
+                "total":3,
+                "total_page":2,
+                "orders":[
+                    {"mobile":"15257242364","bought_at":"2016-10-15 20:22:06"},
+                    {"mobile":"19526590014","bought_at":"2016-10-15 20:22:06"}
+                ]
+            }
+        },
+        "GET /api/seller/goods": {
+            "response": {"code":0,"locker":[{"id":"c5bf7a47-db6a-4338-b495-bbc2605bc33c","price":168800,"color_title":"\u7ea2\u53e4\u94dc"},{"id":"543ed484-40ab-45d6-8b1b-db57d17669a0","price":168800,"color_title":"\u592a\u7a7a\u7070"}]}
+        },
+        "POST /api/seller/logout": {
+            "response": {
+                "code":0
+            }
+        },
+        "POST /api/seller/order/add": {
+            "response": {
+                "code":0,
+                "message": "成功"
+            }
+        },
+        "GET /api/seller/profile": {
+            "response": {
+                "code":0,
+                "invite_count" : 121,     
+                "order_count" : 1,       
+                "seller_count" : 111,
+                "message": "成功"
+            }
+        },
+        "POST /api/seller/homer-invite-check": {
+            "response": {
+                "code": 0,
+                "message": "该用户已被邀请注册，请换其他手机号"
+            }
+        },
+        "POST /api/seller/register-homer-user": {
+            "response": {
+                "code": 0,
+                "message": "注册成功"
+            }
+        },
+        "POST /api/seller/register-homer-user-code": {
+            "response": {
+                "code": 0
             }
         }
     }
